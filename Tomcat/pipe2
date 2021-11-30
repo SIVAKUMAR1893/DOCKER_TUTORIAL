@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+   stage("create clone"){
+            steps{
+               git credentialsId: 'hub', url: 'https://github.com/SIVAKUMAR1893/DOCKER_TUTORIAL.git'
+            }
+        }
+    stage("build") {
+      steps {
+        sh "docker build -t tomcatserver -f Tomcat/Dockerfile ."
+      }
+    }
+    stage("run") {
+      steps {
+        sh """
+          docker run -d -p 60:80 --name tomserver tomcatserver:latest
+        """
+      }
+    }
+  }
+}
