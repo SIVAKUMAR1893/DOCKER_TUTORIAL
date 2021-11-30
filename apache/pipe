@@ -3,7 +3,7 @@ pipeline {
   stages {
    stage("create clone"){
             steps{
-                git credentialsId: 'GIT', url: 'https://github.com/SIVAKUMAR1893/DOCKER_TUTORIAL.git'
+               git credentialsId: 'hub', url: 'https://github.com/SIVAKUMAR1893/DOCKER_TUTORIAL.git'
             }
         }
     stage("build") {
