@@ -14,7 +14,7 @@ pipeline {
     stage("run") {
       steps {
         sh """
-          docker run -d -p 60:8080 --name apaserver apacheserver:latest
+          docker run -d -p 60:80 --name apaserver apacheserver:latest
         """
       }
     }
