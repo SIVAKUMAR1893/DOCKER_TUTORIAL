@@ -14,7 +14,7 @@ pipeline {
     stage("run") {
       steps {
         sh """
-          docker run -d -p 60:80 --name tomserver tomcatserver:latest
+          docker run -d -p 90:80 --name tomserver tomcatserver:latest
         """
       }
     }
