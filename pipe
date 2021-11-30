@@ -8,9 +8,7 @@ pipeline {
         }
     stage("build") {
       steps {
-        sh """
-          docker build -t hello_there apache/Dockerfile .
-        """
+        sh "docker build -t hello_there apache/Dockerfile ."
       }
     }
     stage("run") {
