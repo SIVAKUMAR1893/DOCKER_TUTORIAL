@@ -8,7 +8,7 @@ pipeline {
         }
     stage("build") {
       steps {
-        sh "docker build -t apacheserver apache/Dockerfile ."
+        sh "docker build -t apacheserver apache ."
       }
     }
     stage("run") {
