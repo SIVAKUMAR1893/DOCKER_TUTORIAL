@@ -1,0 +1,24 @@
+pipeline {
+  agent { label "linux" }
+  stages {
+   stage("create clone"){
+            steps{
+                git credentialsId: 'GIT', url: 'https://github.com/SIVAKUMAR1893/Virtusa.git'
+            }
+        }
+    stage("build") {
+      steps {
+        sh """
+          docker build -t hello_there .
+        """
+      }
+    }
+    stage("run") {
+      steps {
+        sh """
+          docker run --rm hello_there
+        """
+      }
+    }
+  }
+}
