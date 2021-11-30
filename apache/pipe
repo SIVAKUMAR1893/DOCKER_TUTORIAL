@@ -8,13 +8,13 @@ pipeline {
         }
     stage("build") {
       steps {
-        sh "docker build -t apache ."
+        sh "docker build -t apacheserver apache/Dockerfile ."
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm apache:latest
+          docker run --rm apacheserver:latest
         """
       }
     }
