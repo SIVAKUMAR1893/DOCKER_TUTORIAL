@@ -10,10 +10,10 @@ RUN tar xzvf apache-tomcat-10.0.*tar.gz -C /opt/tomcat --strip-components=1
 RUN  chmod 755  /opt/tomcat/bin && cd /opt/tomcat/bin && ./startup.sh 
 RUN apt-get -y install default-jdk 
 WORKDIR /root/Docker/DOCKER_TUTORIAL/Tomcat
-COPY index1.html index.html 
+COPY Tomcat/index1.html index.html 
 RUN ls -lrth
 RUN jar -cvf index.war index.html 
-RUN cp Tomcat/index.war /opt/tomcat/webapps
+RUN cp index.war /opt/tomcat/webapps
 #RUN docker run -d -p 50:8080 tomcatserver
 
 EXPOSE 8080
