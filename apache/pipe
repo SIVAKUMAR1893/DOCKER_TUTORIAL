@@ -8,13 +8,13 @@ pipeline {
         }
     stage("build") {
       steps {
-        sh "docker build -t hello_there  pipe ."
+        sh "docker build -t apache ."
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm hello_there
+          docker run --rm apache:latest
         """
       }
     }
