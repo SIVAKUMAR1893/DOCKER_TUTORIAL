@@ -13,8 +13,8 @@ WORKDIR /root/Docker/DOCKER_TUTORIAL/Tomcat
 COPY index1.html index.html 
 RUN ls -lrth
 RUN jar -cvf index.war index.html 
-RUN cp index.war /opt/tomcat/webapps
-#RUN docker run -d -p 70:8080 tomcatserver
+RUN cp Tomcat/index.war /opt/tomcat/webapps
+#RUN docker run -d -p 50:8080 tomcatserver
 
 EXPOSE 8080
 
