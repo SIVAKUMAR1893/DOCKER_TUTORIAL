@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y tzdata
 
 RUN apt-get -y install apache2
 
-COPY index.html /var/www/html/
+COPY apache/index.html /var/www/html/
 
 EXPOSE 80
 
