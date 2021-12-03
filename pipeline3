@@ -8,6 +8,7 @@ pipeline {
         }
     stage("build") {
       steps {
+        sh "chown -R jenkins:jenkins /var/run/docker.sock"
         sh "docker build -t script ."
       }
     }
