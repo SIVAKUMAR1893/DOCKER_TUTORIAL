@@ -14,7 +14,7 @@ pipeline {
     stage("run") {
       steps {
         sh """
-          docker run -d -p 90:80 --name calcaulator calcserver:latest
+          docker run -d -p 50:80 --name calcaulator calcserver:latest
         """
       }
     }
