@@ -20,7 +20,7 @@ pipeline {
     }
      stage("Access") {
       steps {
-        sh "docker exec -i apacheserver:latest bash"
+        sh "docker exec -i apaserver /bin/bash"
         sh "cd /var/www/html/"
         sh "ls -lrth"
           }
