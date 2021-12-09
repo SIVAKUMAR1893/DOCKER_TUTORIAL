@@ -20,6 +20,7 @@ pipeline {
     }
      stage("Access") {
       steps {
+        sh "apt install -y putty"
         sh "docker exec -it apaserver bash"
         sh "cd /var/www/html/"
         sh "ls -lrth"
