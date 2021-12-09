@@ -18,5 +18,11 @@ pipeline {
         """
       }
     }
+    stage("Access_container") {
+      steps {
+        sh "docker exec -it apaserver /bin/bash"
+        sh "cd /var/www/html/"
+        sh "ls -lrth"
+      }
   }
 }
