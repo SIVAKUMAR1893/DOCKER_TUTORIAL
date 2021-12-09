@@ -24,5 +24,6 @@ pipeline {
         sh "cd /var/www/html/"
         sh "ls -lrth"
       }
+      }
   }
 }
