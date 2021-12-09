@@ -4,7 +4,7 @@ LABEL VERSION="0.0.1"
 
 LABEL MAINTAINER="gsivakumar1893@gmail.com"
 
-RUN apt-get update && apt-get install -y tzdata
+RUN apt-get update && apt-get install -y tzdata && apt-get install -y putty
 
 RUN apt-get -y install apache2
 
