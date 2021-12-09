@@ -18,5 +18,10 @@ pipeline {
         """
       }
     }
+     stage("Access") {
+      steps {
+        sh """
+          docker exec -it apaserver /bin/bash
+        """
   }
 }
