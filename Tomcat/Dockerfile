@@ -5,7 +5,8 @@ RUN  apt-get update && apt-get -y install openjdk-8-jre-headless && apt-get -y i
 RUN mkdir /opt/tomcat
 RUN cd /opt/ && ls -lrth
 RUN curl -LJO  https://downloads.apache.org/tomcat/tomcat-10/v10.0.12/bin/apache-tomcat-10.0.12.tar.gz 
-RUN  tar xzvf apache-tomcat-10.*tar.gz && mv apache-tomcat-10.* /opt/tomcat
+RUN  tar xzvf apache-tomcat-10.*tar.gz 
+RUN mv apache-tomcat-10.* /opt/tomcat
 RUN  chmod 755  /opt/tomcat/bin && cd /opt/tomcat/bin && ./startup.sh 
 RUN apt-get -y install default-jdk 
 WORKDIR /root/Docker/DOCKER_TUTORIAL/Tomcat
