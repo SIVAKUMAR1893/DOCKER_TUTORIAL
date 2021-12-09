@@ -6,7 +6,7 @@ RUN mkdir /opt/tomcat
 RUN cd /opt/ && ls -lrth
 RUN curl -LJO  https://downloads.apache.org/tomcat/tomcat-10/v10.0.12/bin/apache-tomcat-10.0.12.tar.gz 
 RUN  cd /opt/tomcat
-RUN tar xzvf apache-tomcat-10.0..12.tar.gz -C /opt/tomcat --strip-components=1 
+RUN tar xzvf apache-tomcat-10.0.12.tar.gz -C /opt/tomcat --strip-components=1 
 RUN  chmod 755  /opt/tomcat/bin && cd /opt/tomcat/bin && ./startup.sh 
 RUN apt-get -y install default-jdk 
 WORKDIR /root/Docker/DOCKER_TUTORIAL/Tomcat
